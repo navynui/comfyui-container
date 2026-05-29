@@ -1,0 +1,44 @@
+services:
+  comfyui:
+    image: ghcr.io/ai-dock/comfyui:latest-cuda
+    container_name: comfyui
+    restart: unless-stopped
+    ipc: host
+    shm_size: "16gb"
+
+    ports:
+      - "8188:8188"
+      
+    environment:
+      - COMFYUI_PORT_HOST=8188
+      - AUTO_UPDATE=true
+      - PYTHONWARNINGS=ignore
+      - SUPERVISOR_NO_AUTOSTART=cloudflared,quicktunnel
+      - WEB_ENABLE_AUTH=false
+      - CM_BYPASS_SECURITY_CHECK=1
+      - PYTHONPATH=/opt/ComfyUI
+      - ARGS=--normalvram --use-xformers --fp16-vae
+      - PYTORCH_CUDA_ALLOC_CONF=garbage_collection_threshold:0.8,max_split_size_mb:64
+      
+      # Explicitly declare runtime visibility inside the wrapper
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+
+    volumes:
+      - comfyui-venv-storage:/opt/environments/python/comfyui
+      - ./provisioning.sh:/opt/ai-dock/bin/provisioning.sh
+      - /home/nui/dev/ComfyUI/custom_nodes:/opt/ComfyUI/custom_nodes
+      - /home/nui/dev/ComfyUI/models:/opt/ComfyUI/models
+      - /home/nui/dev/ComfyUI/output:/opt/ComfyUI/output
+      - /home/nui/dev/ComfyUI/user:/opt/ComfyUI/user
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu, compute, utility, video]
+
+volumes:
+  comfyui-venv-storage:

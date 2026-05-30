@@ -2,27 +2,24 @@
 
 This repository contains the configuration and maintenance scripts for running **ComfyUI** in a GPU-accelerated Docker container.
 
-## 🖥️ Network & Directory Architecture
+## 🖥️ Directory Architecture
 
-This deployment operates across two machines:
-1. **Server (`192.168.1.129` or similar `.129` IP)**: Runs the Docker daemon, GPU resource container, and hosts the physical files.
-2. **Dev Machine (`192.168.1.159` or similar `.159` IP)**: Mounts the server's filesystem under `/home/nui/server` for remote development and configuration.
+All paths below are relative to the server machine:
 
-### Directory Mapping
-| Dev Machine (`.159` IP) | Server (`.129` IP) | Container Internals | Purpose |
-|:---|:---|:---|:---|
-| `/home/nui/server/dev/comfyui-container` | `/home/nui/dev/comfyui-container` | `/workspace` (or execution context) | Docker Compose and script definitions |
-| `/home/nui/server/dev/ComfyUI` | `/home/nui/dev/ComfyUI` | `/opt/ComfyUI` | Core ComfyUI source code |
-| `/home/nui/server/dev/ComfyUI/custom_nodes` | `/home/nui/dev/ComfyUI/custom_nodes` | `/opt/ComfyUI/custom_nodes` | Custom node extensions (git-tracked repos) |
-| `/home/nui/server/dev/ComfyUI/models` | `/home/nui/dev/ComfyUI/models` | `/opt/ComfyUI/models` | AI Model checkpoints, VAEs, LoRAs, etc. |
-| `/home/nui/server/dev/ComfyUI/output` | `/home/nui/dev/ComfyUI/output` | `/opt/ComfyUI/output` | Generated outputs and images |
-| `/home/nui/server/dev/ComfyUI/user` | `/home/nui/dev/ComfyUI/user` | `/opt/ComfyUI/user` | User settings, ComfyUI-Manager config, profiles |
+| Path | Container Internals | Purpose |
+|:---|:---|:---|
+| `/home/nui/dev/comfyui-container` | `/workspace` (or execution context) | Docker Compose and script definitions |
+| `/home/nui/dev/ComfyUI` | `/opt/ComfyUI` | Core ComfyUI source code |
+| `/home/nui/dev/ComfyUI/custom_nodes` | `/opt/ComfyUI/custom_nodes` | Custom node extensions (git-tracked repos) |
+| `/home/nui/dev/ComfyUI/models` | `/opt/ComfyUI/models` | AI Model checkpoints, VAEs, LoRAs, etc. |
+| `/home/nui/dev/ComfyUI/output` | `/opt/ComfyUI/output` | Generated outputs and images |
+| `/home/nui/dev/ComfyUI/user` | `/opt/ComfyUI/user` | User settings, ComfyUI-Manager config, profiles |
 
 ---
 
 ## 🚀 Running the Container
 
-All docker-compose commands must be executed **on the Server (`.129`)** in the `/home/nui/dev/comfyui-container` directory.
+All docker-compose commands must be executed in the `/home/nui/dev/comfyui-container` directory on the container host.
 
 ### Start the ComfyUI Service
 ```bash
@@ -41,7 +38,7 @@ docker compose logs -f comfyui
 
 ### Accessing the Web UI
 Open your browser and navigate to:
-* **Direct IP**: `http://<server-ip>:8188` (e.g., `http://192.168.1.129:8188`)
+* `http://localhost:8188` (or the server's network address on port `8188`)
 
 ---
 
@@ -51,7 +48,7 @@ Three scripts are provided to manage updates and automatic provisioning:
 
 ### 1. `update.sh` (Core & Stack Updates)
 Use this script to update ComfyUI Core, ComfyUI-Manager, rebuild the container, and update dependencies.
-* **Usage (on Server)**:
+* **Usage**:
   ```bash
   ./update.sh
   ```
@@ -64,7 +61,7 @@ Use this script to update ComfyUI Core, ComfyUI-Manager, rebuild the container, 
 
 ### 2. `update_nodes.sh` (Custom Nodes Mass Update)
 Use this script to quickly update all installed Custom Nodes that are tracked via Git.
-* **Usage (on Server)**:
+* **Usage**:
   ```bash
   ./update_nodes.sh
   ```

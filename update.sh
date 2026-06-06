@@ -33,6 +33,7 @@ fi
 
 # 3. Rebuild and restart the container engine
 echo -e "${YELLOW}[3/3] Rebuilding Docker Stack Containers...${NC}"
+docker compose pull
 docker compose down
 docker compose up -d --force-recreate
 

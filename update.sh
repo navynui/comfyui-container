@@ -37,9 +37,10 @@ docker compose pull
 docker compose down
 docker compose up -d --force-recreate
 
-# 4. CRITICAL: Force-sync Python dependencies into the persistent venv volume
-echo -e "${YELLOW}[4/4] Syncing Python Package Dependencies inside Container...${NC}"
+# 4. CRITICAL: Force-sync Python dependencies and upgrade PyTorch + xformers inside container
+echo -e "${YELLOW}[4/4] Upgrading PyTorch, xformers & Dependencies inside Container...${NC}"
 sleep 3
+docker compose exec comfyui /opt/environments/python/comfyui/bin/pip install --upgrade torch torchvision torchaudio xformers --index-url https://download.pytorch.org/whl/cu121
 docker compose exec comfyui /opt/environments/python/comfyui/bin/python -m pip install -r /opt/ComfyUI/requirements.txt
 
 echo -e "${GREEN}=== System Successfully Updated and Restarted! ===${NC}"

@@ -2,7 +2,7 @@ services:
   comfyui:
     image: ghcr.io/ai-dock/comfyui:latest-cuda
     container_name: comfyui
-    restart: unless-stopped
+    restart: "no"
     ipc: host
     shm_size: "16gb"
 

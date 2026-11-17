@@ -7,7 +7,7 @@ services:
     shm_size: "16gb"
 
     ports:
-      - "8188:8188"
+      - "8188:18188"
       
     environment:
       - COMFYUI_PORT_HOST=8188
@@ -20,15 +20,15 @@ services:
       - WEB_ENABLE_AUTH=false
       - CM_BYPASS_SECURITY_CHECK=1
       - PYTHONPATH=/opt/ComfyUI
-      # NOTE: --use-xformers removed on purpose. Do not enable it here without
-      # re-testing on the P100; the pinned stack uses native torch attention.
-      # NOTE: --normalvram removed: it is no longer a valid ComfyUI flag in current
-      # master (it aborts startup on argument parsing). Normal VRAM is the default.
-      # NOTE: this ai-dock image reads COMFYUI_ARGS, not ARGS. The old ARGS key was
-      # silently ignored, so none of the intended flags were ever applied.
-      # NOTE: --lowvram is intentionally NOT enabled. The baseline completed Boogu
-      # at 11.97 GB peak on NORMAL_VRAM. Add it only if a future model actually OOMs.
-      - COMFYUI_ARGS=--fp16-vae
+      # P100 (sm_60) launch flags — see research.md and tesla_p100_comfyui_optimization_plan.md
+      # --fp16-vae: VAE in fp16 (Phase 1: small consistent win, output verified identical)
+      # --force-fp32 / --use-pytorch-cross-attention: REMOVED — Z-Image regressed ~20%
+      #   (fp32 increases VRAM pressure on 16 GB card; SDPA already the default backend)
+      # --fast-disk REMOVED: caused 71% Z-Image slowdown; container disk slower than RAM
+      - COMFYUI_ARGS=--fp16-vae --listen 0.0.0.0
+      # Prevent newer PyTorch from JIT-compiling Triton kernels (fails without a C compiler
+      # in the image; sm_60 has no tensor cores anyway).
+      - TORCH_DISABLE_NATIVE_JIT=1
       - PYTORCH_CUDA_ALLOC_CONF=garbage_collection_threshold:0.8,max_split_size_mb:64
       - COMFYUI_MANAGER_PYTHON_EXE=/opt/environments/python/comfyui/bin/python      
       # Explicitly declare runtime visibility inside the wrapper
@@ -36,7 +36,7 @@ services:
       - NVIDIA_DRIVER_CAPABILITIES=all
 
     volumes:
-      - comfyui-venv-storage:/opt/environments/python/comfyui
+      - comfyui-venv-final:/opt/environments/python/comfyui
       - ./provisioning.sh:/opt/ai-dock/bin/provisioning.sh
       - /home/nui/dev/ComfyUI:/opt/ComfyUI
 
@@ -47,6 +47,10 @@ services:
             - driver: nvidia
               device_ids: ['0']
               capabilities: [gpu, compute, utility, video]
+    # Start ComfyUI directly (bypass ai-dock init.sh which crashes on exit).
+    # ComfyUI listens on port 18188 inside the container, mapped to 8188 on host.
+    command: ["bash", "-c", "sleep 2 && /opt/environments/python/comfyui/bin/python /opt/ComfyUI/main.py --disable-auto-launch --fp16-vae --listen 0.0.0.0 --port 18188"]
 
 volumes:
-  comfyui-venv-storage:
+  comfyui-venv-final:
+    external: true

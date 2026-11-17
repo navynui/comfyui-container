@@ -9,6 +9,8 @@ if [ -f "$VENV_PYTHON" ]; then
     
     # Force installation of core system tools along with your options
     $VENV_PYTHON -m pip install toml gguf sqlalchemy alembic blake3
+    # ComfyUI 0.27.0 additional requirements
+    $VENV_PYTHON -m pip install comfy-aimdo comfyui-frontend-package comfyui-workflow-templates comfyui-embedded-docs pydantic-settings
 
     if [ ! -f "/opt/environments/python/comfyui/bin/pip3" ]; then
         echo "=== [Generating Pip Executable Proxy for ComfyUI-Manager] ==="

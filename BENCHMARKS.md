@@ -241,6 +241,88 @@ GGUF is not useful on this GPU. The rejected GGUF test files (Z-Image Q8/Q6_K,
 Boogu V1/V2, Krea2 Q6_K) and their test workflows were deleted on 2026-11-04,
 freeing ~37 GiB; see TODO §11.
 
+## Launch-flag optimization — 2026-11-17
+
+Tested P100-specific launch flags from `research.md` and
+`tesla_p100_comfyui_optimization_plan.md` on top of the Phase 1 stack
+(`COMFYUI_ARGS=--fp16-vae`). Raw data: `optimized_results.json`.
+
+Stack: ComfyUI 0.27.0, torch `2.4.1+cu121`, CUDA 12.1, P100 `sm_60`,
+`COMFYUI_ARGS=--fp16-vae`, `TORCH_DISABLE_NATIVE_JIT=1`,
+`PYTORCH_CUDA_ALLOC_CONF=garbage_collection_threshold:0.8,max_split_size_mb:64`.
+
+| Workflow | Baseline | Optimized | Delta | Peak VRAM (base -> opt) |
+|---|---:|---:|---:|---:|
+| z-image-turbo | 153.20 s | **151.23 s** | −1.97 s (−1.3%) | 14,497 → 14,503 MB |
+| krea2-turbo | 120.16 s | **118.18 s** | −1.98 s (−1.6%) | 12,929 → 11,873 MB |
+| boogu-turbo | 38.60 s | **37.06 s** | −1.54 s (−4.0%) | 11,971 → 13,921 MB |
+
+3 measured runs each (seeds 4201-4203), all successful, no OOM, no black
+images, output verified identical (same-seed diffs <0.03/255).
+
+### Rejected flags
+
+| Flag | Result | Decision |
+|---|---|---|
+| `--fast-disk` | Z-Image 153s → 262s (+71%) | Reverted — container disk slower than RAM |
+| `--force-fp32` | Z-Image 153s → 184s (+20%), VRAM +1 GB | Reverted — fp32 pressure on 16 GB card |
+| `--use-pytorch-cross-attention` | No measurable gain (SDPA already default) | Reverted |
+
+`--fast-disk` and `--force-fp32` were tested together and separately; both
+hurt Z-Image. The `--fp16-vae` Phase 1 config remains the best proven stack.
+
+### Current state
+
+`docker-compose.yml` now sets:
+```
+COMFYUI_ARGS=--fp16-vae
+TORCH_DISABLE_NATIVE_JIT=1
+PYTORCH_CUDA_ALLOC_CONF=garbage_collection_threshold:0.8,max_split_size_mb:64
+```
+
+Launch-flag tuning is essentially exhausted — gains are 1–4%, matching Phase 1.
+The next lever is upgrading PyTorch from 2.4.1+cu121 to a newer sm_60-compatible
+wheel (torch 2.7.1+cu118 or 2.14+cu126 per `research.md`). See Phase 5 below.
+
+## Phase 5 — PyTorch upgrade (tested, blocked)
+
+Goal: test whether torch 2.7.1+cu118 or 2.14+cu126 improves P100 performance
+over the current 2.4.1+cu121.
+
+`research.md` documents:
+- cu118 wheel: `pip install torch==2.7.1+cu118 torchaudio==2.7.1+cu118 --index-url download.pytorch.org/whl/cu118`
+- cu126 wheel: Linux, proven — one P100 user runs ComfyUI 0.39 + PyTorch 2.14 + cu126
+- Self-built sm_60 wheel: CUDA 12.x + cuDNN 8.9, `TORCH_CUDA_ARCH_LIST="6.0"`
+
+**Result: blocked by compiled extension incompatibility.**
+
+Installed torch 2.7.1+cu118 (+ torchvision 0.22.1+cu118 + torchaudio 2.7.1+cu118)
+in a container with ComfyUI 0.27.0 mounted. Torch imports fine and reports
+`sm_60` in its arch list. However, ComfyUI fails to run with:
+
+```
+module 'comfy.quant_ops' has no attribute 'ck'
+```
+
+`comfy.quant_ops` is a compiled C++/CUDA extension shipped with ComfyUI 0.27.0
+that was built against torch 2.4.1+cu121. It is incompatible with torch 2.7.1.
+Rebuilding it requires a C compiler + CUDA toolchain inside the container, which
+the ai-dock image does not provide.
+
+Other breakage from the torch bump:
+- xformers 0.0.28.post1 can't load its C++ extensions (built for torch 2.4.1)
+- Database migration error: `Can't locate revision identified by '0006_add_loader_path'`
+- Missing packages: `comfyui-workflow-templates`, `comfyui-embedded-docs`, `pydantic-settings`, etc.
+
+**Conclusion: a simple `pip install torch==2.7.1+cu118` is not sufficient.**
+To upgrade PyTorch on the P100, you would need to either:
+1. Rebuild ComfyUI's compiled extensions (`comfy.quant_ops`, etc.) against the new torch, or
+2. Use a self-built sm_60 torch wheel and rebuild the entire ComfyUI C++ extension chain, or
+3. Wait for ComfyUI to ship pre-built wheels for newer torch versions.
+
+This path is deferred. Launch-flag optimization (`--fp16-vae` +
+`TORCH_DISABLE_NATIVE_JIT=1`) remains the best proven stack.
+
 ## Next benchmark
 
 Phase 4 optional items: the known-good pre-freeze stack (torch 2.5.1 +

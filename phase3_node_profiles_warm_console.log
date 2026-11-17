@@ -1,0 +1,30 @@
+
+[zimage] warm-up ...
+[zimage] profiled run ...
+  peak VRAM 14505 MB
+   146.65s  57:3    KSampler
+     3.70s  57:8    VAEDecode
+     3.26s  57:27   CLIPTextEncode
+     0.74s  9       SaveImage
+     0.00s  57:33   ConditioningZeroOut
+
+[krea2] warm-up ...
+[krea2] profiled run ...
+  peak VRAM 12641 MB
+   117.26s  3       KSampler
+     6.44s  4       CLIPTextEncode
+     0.75s  7       VAEDecode
+     0.13s  9       SaveImage
+     0.00s  5       ConditioningZeroOut
+     0.00s  10      ConditioningKrea2Rebalance
+
+[boogu] warm-up ...
+[boogu] profiled run ...
+  peak VRAM 13921 MB
+    35.61s  34:32   KSampler
+    13.78s  34:11   CLIPTextEncode
+     0.83s  34:3    VAEDecode
+     0.16s  33      SaveImage
+     0.00s  34:9    ConditioningZeroOut
+
+Wrote phase3_node_profiles_warm.json

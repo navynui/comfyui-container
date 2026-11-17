@@ -1,0 +1,662 @@
+[
+  {
+    "workflow": "zimage",
+    "run": 0,
+    "seed": 4200,
+    "prompt_id": "8f1d35ea-46eb-4a24-a8a0-b1ecbb684bb3",
+    "wall_seconds": 170.361,
+    "execution_seconds": 169.629,
+    "peak_vram_mb": 14691,
+    "status": "success",
+    "meta": {
+      "prompt_node": "57:27",
+      "latent_node": "57:13",
+      "sampler_node": "57:3",
+      "save_node": "9",
+      "width": 1920,
+      "height": 1088,
+      "steps": 8,
+      "sampler": "res_multistep",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4200
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "8f1d35ea-46eb-4a24-a8a0-b1ecbb684bb3",
+          "timestamp": 1793715585091
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "8f1d35ea-46eb-4a24-a8a0-b1ecbb684bb3",
+          "timestamp": 1793715585093
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "8f1d35ea-46eb-4a24-a8a0-b1ecbb684bb3",
+          "timestamp": 1793715754720
+        }
+      ]
+    ],
+    "warmup": true
+  },
+  {
+    "workflow": "zimage",
+    "run": 1,
+    "seed": 4201,
+    "prompt_id": "039a6368-c6a8-4608-a9f3-c067946c2e18",
+    "wall_seconds": 151.231,
+    "execution_seconds": 150.609,
+    "peak_vram_mb": 14505,
+    "status": "success",
+    "meta": {
+      "prompt_node": "57:27",
+      "latent_node": "57:13",
+      "sampler_node": "57:3",
+      "save_node": "9",
+      "width": 1920,
+      "height": 1088,
+      "steps": 8,
+      "sampler": "res_multistep",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4201
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "039a6368-c6a8-4608-a9f3-c067946c2e18",
+          "timestamp": 1793715755765
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "57:30",
+            "57:29",
+            "57:33",
+            "57:28",
+            "57:27",
+            "57:13",
+            "57:11"
+          ],
+          "prompt_id": "039a6368-c6a8-4608-a9f3-c067946c2e18",
+          "timestamp": 1793715755767
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "039a6368-c6a8-4608-a9f3-c067946c2e18",
+          "timestamp": 1793715906374
+        }
+      ]
+    ],
+    "warmup": false
+  },
+  {
+    "workflow": "zimage",
+    "run": 2,
+    "seed": 4202,
+    "prompt_id": "fdeaad89-fd2f-4421-8558-51a8be32131a",
+    "wall_seconds": 151.201,
+    "execution_seconds": 150.553,
+    "peak_vram_mb": 14505,
+    "status": "success",
+    "meta": {
+      "prompt_node": "57:27",
+      "latent_node": "57:13",
+      "sampler_node": "57:3",
+      "save_node": "9",
+      "width": 1920,
+      "height": 1088,
+      "steps": 8,
+      "sampler": "res_multistep",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4202
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "fdeaad89-fd2f-4421-8558-51a8be32131a",
+          "timestamp": 1793715907046
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "57:30",
+            "57:29",
+            "57:33",
+            "57:28",
+            "57:27",
+            "57:13",
+            "57:11"
+          ],
+          "prompt_id": "fdeaad89-fd2f-4421-8558-51a8be32131a",
+          "timestamp": 1793715907048
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "fdeaad89-fd2f-4421-8558-51a8be32131a",
+          "timestamp": 1793716057599
+        }
+      ]
+    ],
+    "warmup": false
+  },
+  {
+    "workflow": "zimage",
+    "run": 3,
+    "seed": 4203,
+    "prompt_id": "0ee53a90-031b-428d-a9e0-500f982b129a",
+    "wall_seconds": 151.201,
+    "execution_seconds": 150.647,
+    "peak_vram_mb": 14505,
+    "status": "success",
+    "meta": {
+      "prompt_node": "57:27",
+      "latent_node": "57:13",
+      "sampler_node": "57:3",
+      "save_node": "9",
+      "width": 1920,
+      "height": 1088,
+      "steps": 8,
+      "sampler": "res_multistep",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4203
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "0ee53a90-031b-428d-a9e0-500f982b129a",
+          "timestamp": 1793716058294
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "57:30",
+            "57:29",
+            "57:33",
+            "57:28",
+            "57:27",
+            "57:13",
+            "57:11"
+          ],
+          "prompt_id": "0ee53a90-031b-428d-a9e0-500f982b129a",
+          "timestamp": 1793716058295
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "0ee53a90-031b-428d-a9e0-500f982b129a",
+          "timestamp": 1793716208941
+        }
+      ]
+    ],
+    "warmup": false
+  },
+  {
+    "workflow": "zimage_q8",
+    "run": 0,
+    "seed": 4200,
+    "prompt_id": "a594cbe7-292a-48e7-a77b-865e75a2fbdc",
+    "wall_seconds": 155.203,
+    "execution_seconds": 154.396,
+    "peak_vram_mb": 14751,
+    "status": "success",
+    "meta": {
+      "prompt_node": "57:27",
+      "latent_node": "57:13",
+      "sampler_node": "57:3",
+      "save_node": "9",
+      "width": 1920,
+      "height": 1088,
+      "steps": 8,
+      "sampler": "res_multistep",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4200
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "a594cbe7-292a-48e7-a77b-865e75a2fbdc",
+          "timestamp": 1793716209585
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "57:30",
+            "57:29",
+            "57:33",
+            "57:27",
+            "57:13"
+          ],
+          "prompt_id": "a594cbe7-292a-48e7-a77b-865e75a2fbdc",
+          "timestamp": 1793716209586
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "a594cbe7-292a-48e7-a77b-865e75a2fbdc",
+          "timestamp": 1793716363981
+        }
+      ]
+    ],
+    "warmup": true
+  },
+  {
+    "workflow": "zimage_q8",
+    "run": 1,
+    "seed": 4201,
+    "prompt_id": "0f4068c4-eef8-410e-b5cd-83cd788653d3",
+    "wall_seconds": 150.596,
+    "execution_seconds": 150.146,
+    "peak_vram_mb": 14751,
+    "status": "success",
+    "meta": {
+      "prompt_node": "57:27",
+      "latent_node": "57:13",
+      "sampler_node": "57:3",
+      "save_node": "9",
+      "width": 1920,
+      "height": 1088,
+      "steps": 8,
+      "sampler": "res_multistep",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4201
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "0f4068c4-eef8-410e-b5cd-83cd788653d3",
+          "timestamp": 1793716364888
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "57:30",
+            "57:29",
+            "57:33",
+            "57:28",
+            "57:27",
+            "57:13",
+            "57:11"
+          ],
+          "prompt_id": "0f4068c4-eef8-410e-b5cd-83cd788653d3",
+          "timestamp": 1793716364890
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "0f4068c4-eef8-410e-b5cd-83cd788653d3",
+          "timestamp": 1793716515034
+        }
+      ]
+    ],
+    "warmup": false
+  },
+  {
+    "workflow": "zimage_q8",
+    "run": 2,
+    "seed": 4202,
+    "prompt_id": "56de013c-e0f9-47cd-984b-9597acbc0eb9",
+    "wall_seconds": 150.627,
+    "execution_seconds": 150.178,
+    "peak_vram_mb": 14751,
+    "status": "success",
+    "meta": {
+      "prompt_node": "57:27",
+      "latent_node": "57:13",
+      "sampler_node": "57:3",
+      "save_node": "9",
+      "width": 1920,
+      "height": 1088,
+      "steps": 8,
+      "sampler": "res_multistep",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4202
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "56de013c-e0f9-47cd-984b-9597acbc0eb9",
+          "timestamp": 1793716515526
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "57:30",
+            "57:29",
+            "57:33",
+            "57:28",
+            "57:27",
+            "57:13",
+            "57:11"
+          ],
+          "prompt_id": "56de013c-e0f9-47cd-984b-9597acbc0eb9",
+          "timestamp": 1793716515527
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "56de013c-e0f9-47cd-984b-9597acbc0eb9",
+          "timestamp": 1793716665704
+        }
+      ]
+    ],
+    "warmup": false
+  },
+  {
+    "workflow": "zimage_q8",
+    "run": 3,
+    "seed": 4203,
+    "prompt_id": "90557c5d-34c6-4fa1-a324-9199a6df6dbf",
+    "wall_seconds": 151.186,
+    "execution_seconds": 150.227,
+    "peak_vram_mb": 14751,
+    "status": "success",
+    "meta": {
+      "prompt_node": "57:27",
+      "latent_node": "57:13",
+      "sampler_node": "57:3",
+      "save_node": "9",
+      "width": 1920,
+      "height": 1088,
+      "steps": 8,
+      "sampler": "res_multistep",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4203
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "90557c5d-34c6-4fa1-a324-9199a6df6dbf",
+          "timestamp": 1793716666202
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "57:30",
+            "57:29",
+            "57:33",
+            "57:28",
+            "57:27",
+            "57:13",
+            "57:11"
+          ],
+          "prompt_id": "90557c5d-34c6-4fa1-a324-9199a6df6dbf",
+          "timestamp": 1793716666202
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "90557c5d-34c6-4fa1-a324-9199a6df6dbf",
+          "timestamp": 1793716816429
+        }
+      ]
+    ],
+    "warmup": false
+  },
+  {
+    "workflow": "zimage_q6k",
+    "run": 0,
+    "seed": 4200,
+    "prompt_id": "2ec809d7-d756-4182-9049-18ea5f7c29b2",
+    "wall_seconds": 158.207,
+    "execution_seconds": 157.547,
+    "peak_vram_mb": 13825,
+    "status": "success",
+    "meta": {
+      "prompt_node": "57:27",
+      "latent_node": "57:13",
+      "sampler_node": "57:3",
+      "save_node": "9",
+      "width": 1920,
+      "height": 1088,
+      "steps": 8,
+      "sampler": "res_multistep",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4200
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "2ec809d7-d756-4182-9049-18ea5f7c29b2",
+          "timestamp": 1793716817462
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "57:30",
+            "57:29",
+            "57:33",
+            "57:27",
+            "57:13"
+          ],
+          "prompt_id": "2ec809d7-d756-4182-9049-18ea5f7c29b2",
+          "timestamp": 1793716817463
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "2ec809d7-d756-4182-9049-18ea5f7c29b2",
+          "timestamp": 1793716975009
+        }
+      ]
+    ],
+    "warmup": true
+  },
+  {
+    "workflow": "zimage_q6k",
+    "run": 1,
+    "seed": 4201,
+    "prompt_id": "8f9f13ab-1399-494a-bfd7-fc8f92d89558",
+    "wall_seconds": 154.197,
+    "execution_seconds": 153.336,
+    "peak_vram_mb": 13825,
+    "status": "success",
+    "meta": {
+      "prompt_node": "57:27",
+      "latent_node": "57:13",
+      "sampler_node": "57:3",
+      "save_node": "9",
+      "width": 1920,
+      "height": 1088,
+      "steps": 8,
+      "sampler": "res_multistep",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4201
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "8f9f13ab-1399-494a-bfd7-fc8f92d89558",
+          "timestamp": 1793716975741
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "57:30",
+            "57:29",
+            "57:33",
+            "57:28",
+            "57:27",
+            "57:13",
+            "57:11"
+          ],
+          "prompt_id": "8f9f13ab-1399-494a-bfd7-fc8f92d89558",
+          "timestamp": 1793716975742
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "8f9f13ab-1399-494a-bfd7-fc8f92d89558",
+          "timestamp": 1793717129077
+        }
+      ]
+    ],
+    "warmup": false
+  },
+  {
+    "workflow": "zimage_q6k",
+    "run": 2,
+    "seed": 4202,
+    "prompt_id": "8187ec4c-a16f-4e2b-9c3a-64c8909e68da",
+    "wall_seconds": 154.201,
+    "execution_seconds": 153.403,
+    "peak_vram_mb": 13825,
+    "status": "success",
+    "meta": {
+      "prompt_node": "57:27",
+      "latent_node": "57:13",
+      "sampler_node": "57:3",
+      "save_node": "9",
+      "width": 1920,
+      "height": 1088,
+      "steps": 8,
+      "sampler": "res_multistep",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4202
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "8187ec4c-a16f-4e2b-9c3a-64c8909e68da",
+          "timestamp": 1793717130045
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "57:30",
+            "57:29",
+            "57:33",
+            "57:28",
+            "57:27",
+            "57:13",
+            "57:11"
+          ],
+          "prompt_id": "8187ec4c-a16f-4e2b-9c3a-64c8909e68da",
+          "timestamp": 1793717130046
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "8187ec4c-a16f-4e2b-9c3a-64c8909e68da",
+          "timestamp": 1793717283448
+        }
+      ]
+    ],
+    "warmup": false
+  },
+  {
+    "workflow": "zimage_q6k",
+    "run": 3,
+    "seed": 4203,
+    "prompt_id": "c2f7aead-bbb7-455c-b4f8-e42af6142721",
+    "wall_seconds": 154.204,
+    "execution_seconds": 153.561,
+    "peak_vram_mb": 13825,
+    "status": "success",
+    "meta": {
+      "prompt_node": "57:27",
+      "latent_node": "57:13",
+      "sampler_node": "57:3",
+      "save_node": "9",
+      "width": 1920,
+      "height": 1088,
+      "steps": 8,
+      "sampler": "res_multistep",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4203
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "c2f7aead-bbb7-455c-b4f8-e42af6142721",
+          "timestamp": 1793717284325
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "57:30",
+            "57:29",
+            "57:33",
+            "57:28",
+            "57:27",
+            "57:13",
+            "57:11"
+          ],
+          "prompt_id": "c2f7aead-bbb7-455c-b4f8-e42af6142721",
+          "timestamp": 1793717284327
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "c2f7aead-bbb7-455c-b4f8-e42af6142721",
+          "timestamp": 1793717437886
+        }
+      ]
+    ],
+    "warmup": false
+  }
+]

@@ -1,0 +1,30 @@
+
+[krea2] warmup seed=4200
+  wall=131.241s exec=130.612s peak_vram=12545MB status=success
+
+[krea2] run 1 seed=4201
+  wall=119.155s exec=118.182s peak_vram=12641MB status=success
+
+[krea2] run 2 seed=4202
+  wall=118.348s exec=118.103s peak_vram=12641MB status=success
+
+[krea2] run 3 seed=4203
+  wall=118.356s exec=118.12s peak_vram=12609MB status=success
+
+[krea2_q5km] warmup seed=4200
+  wall=123.158s exec=122.166s peak_vram=11521MB status=success
+
+[krea2_q5km] run 1 seed=4201
+  wall=118.148s exec=117.832s peak_vram=11233MB status=success
+
+[krea2_q5km] run 2 seed=4202
+  wall=118.154s exec=117.839s peak_vram=11233MB status=success
+
+[krea2_q5km] run 3 seed=4203
+  wall=118.154s exec=117.839s peak_vram=11265MB status=success
+
+Wrote phase3_krea2_q5km_results.json
+
+Measured runs (mean):
+  krea2: wall 118.62s, exec 118.13s, peak VRAM 12641 MB, n=3
+  krea2_q5km: wall 118.15s, exec 117.84s, peak VRAM 11265 MB, n=3

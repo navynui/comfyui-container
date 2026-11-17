@@ -1,0 +1,43 @@
+
+[zimage] warmup seed=4200
+  wall=166.35s exec=165.394s peak_vram=14693MB status=success
+
+[zimage] run 1 seed=4201
+  wall=151.324s exec=150.793s peak_vram=14695MB status=success
+
+[zimage] run 2 seed=4202
+  wall=151.192s exec=150.461s peak_vram=14501MB status=success
+
+[zimage] run 3 seed=4203
+  wall=151.194s exec=150.531s peak_vram=14501MB status=success
+
+[krea2] warmup seed=4200
+  wall=138.513s exec=138.261s peak_vram=12609MB status=success
+
+[krea2] run 1 seed=4201
+  wall=118.37s exec=118.122s peak_vram=12577MB status=success
+
+[krea2] run 2 seed=4202
+  wall=118.36s exec=118.114s peak_vram=12705MB status=success
+
+[krea2] run 3 seed=4203
+  wall=118.392s exec=118.142s peak_vram=12577MB status=success
+
+[boogu] warmup seed=4200
+  wall=149.429s exec=148.729s peak_vram=14113MB status=success
+
+[boogu] run 1 seed=4201
+  wall=37.051s exec=36.596s peak_vram=13921MB status=success
+
+[boogu] run 2 seed=4202
+  wall=37.065s exec=36.602s peak_vram=13921MB status=success
+
+[boogu] run 3 seed=4203
+  wall=37.053s exec=36.657s peak_vram=13921MB status=success
+
+Wrote /home/nui/dev/comfyui-container/phase2_xformers_results.json
+
+Measured runs (mean):
+  zimage: wall 151.24s, exec 150.59s, peak VRAM 14695 MB, n=3
+  krea2: wall 118.37s, exec 118.13s, peak VRAM 12705 MB, n=3
+  boogu: wall 37.06s, exec 36.62s, peak VRAM 13921 MB, n=3

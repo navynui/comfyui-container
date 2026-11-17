@@ -20,17 +20,15 @@ services:
       - WEB_ENABLE_AUTH=false
       - CM_BYPASS_SECURITY_CHECK=1
       - PYTHONPATH=/opt/ComfyUI
-      # NOTE: --use-xformers removed on purpose. The Tesla P100 is compute capability
-      # 6.0 (Pascal); xformers prebuilt wheels only support sm_70+, so enabling it
-      # breaks generation. ComfyUI falls back to native torch attention, which works.
+      # NOTE: --use-xformers removed on purpose. Do not enable it here without
+      # re-testing on the P100; the pinned stack uses native torch attention.
       # NOTE: --normalvram removed: it is no longer a valid ComfyUI flag in current
       # master (it aborts startup on argument parsing). Normal VRAM is the default.
-      # NOTE: --lowvram added: the Tesla P100 only has 16 GB VRAM. The Boogu T2I
-      # workflow (Qwen3-VL 8B text encoder + fp8 Boogu DiT at 720x1280) exceeds that
-      # and OOMs during sampling. --lowvram offloads model layers to CPU so large
-      # models fit; zimage/krea2 still run (a little slower). If you move to a GPU
-      # with >=24 GB VRAM you can drop --lowvram for full speed.
-      - ARGS=--fp16-vae --lowvram
+      # NOTE: this ai-dock image reads COMFYUI_ARGS, not ARGS. The old ARGS key was
+      # silently ignored, so none of the intended flags were ever applied.
+      # NOTE: --lowvram is intentionally NOT enabled. The baseline completed Boogu
+      # at 11.97 GB peak on NORMAL_VRAM. Add it only if a future model actually OOMs.
+      - COMFYUI_ARGS=--fp16-vae
       - PYTORCH_CUDA_ALLOC_CONF=garbage_collection_threshold:0.8,max_split_size_mb:64
       - COMFYUI_MANAGER_PYTHON_EXE=/opt/environments/python/comfyui/bin/python      
       # Explicitly declare runtime visibility inside the wrapper

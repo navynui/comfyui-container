@@ -1,0 +1,139 @@
+{
+  "zimage": {
+    "prompt_id": "e28beb50-836e-4dc5-934e-b59dc528161c",
+    "peak_vram_mb": 14505,
+    "total_events_seconds": 154.35,
+    "cached_nodes": [
+      "57:30",
+      "57:29",
+      "57:28",
+      "57:13",
+      "57:11"
+    ],
+    "nodes": [
+      {
+        "node": "57:3",
+        "class": "KSampler",
+        "title": "KSampler",
+        "seconds": 146.651
+      },
+      {
+        "node": "57:8",
+        "class": "VAEDecode",
+        "title": "VAE Decode",
+        "seconds": 3.698
+      },
+      {
+        "node": "57:27",
+        "class": "CLIPTextEncode",
+        "title": "CLIP Text Encode (Prompt)",
+        "seconds": 3.258
+      },
+      {
+        "node": "9",
+        "class": "SaveImage",
+        "title": "Save Image",
+        "seconds": 0.743
+      },
+      {
+        "node": "57:33",
+        "class": "ConditioningZeroOut",
+        "title": "ConditioningZeroOut",
+        "seconds": 0.0
+      }
+    ]
+  },
+  "krea2": {
+    "prompt_id": "497cac1f-bcec-4947-ba8a-5b7a8b97d3da",
+    "peak_vram_mb": 12641,
+    "total_events_seconds": 124.584,
+    "cached_nodes": [
+      "1",
+      "2",
+      "6",
+      "8",
+      "11"
+    ],
+    "nodes": [
+      {
+        "node": "3",
+        "class": "KSampler",
+        "title": "KSampler",
+        "seconds": 117.261
+      },
+      {
+        "node": "4",
+        "class": "CLIPTextEncode",
+        "title": "CLIP Text Encode (Prompt)",
+        "seconds": 6.439
+      },
+      {
+        "node": "7",
+        "class": "VAEDecode",
+        "title": "VAE Decode",
+        "seconds": 0.753
+      },
+      {
+        "node": "9",
+        "class": "SaveImage",
+        "title": "Save Image",
+        "seconds": 0.131
+      },
+      {
+        "node": "5",
+        "class": "ConditioningZeroOut",
+        "title": "ConditioningZeroOut",
+        "seconds": 0.0
+      },
+      {
+        "node": "10",
+        "class": "ConditioningKrea2Rebalance",
+        "title": "Conditioning Krea2 Rebalance",
+        "seconds": 0.0
+      }
+    ]
+  },
+  "boogu": {
+    "prompt_id": "34fbf474-fde5-4226-a840-ab6ba6692dd7",
+    "peak_vram_mb": 13921,
+    "total_events_seconds": 50.384,
+    "cached_nodes": [
+      "34:7",
+      "34:5",
+      "34:2",
+      "34:8"
+    ],
+    "nodes": [
+      {
+        "node": "34:32",
+        "class": "KSampler",
+        "title": "KSampler",
+        "seconds": 35.607
+      },
+      {
+        "node": "34:11",
+        "class": "CLIPTextEncode",
+        "title": "CLIP Text Encode (Prompt)",
+        "seconds": 13.783
+      },
+      {
+        "node": "34:3",
+        "class": "VAEDecode",
+        "title": "VAE Decode",
+        "seconds": 0.835
+      },
+      {
+        "node": "33",
+        "class": "SaveImage",
+        "title": "Save Image",
+        "seconds": 0.159
+      },
+      {
+        "node": "34:9",
+        "class": "ConditioningZeroOut",
+        "title": "Conditioning Zero Out",
+        "seconds": 0.0
+      }
+    ]
+  }
+}

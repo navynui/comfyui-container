@@ -1,0 +1,20 @@
+
+[krea2_edit] warmup seed=4200
+  wall=434.241s exec=433.898s peak_vram=14561MB status=success
+
+[krea2_edit] run 1 seed=4201
+  wall=396.496s exec=395.591s peak_vram=14497MB status=success
+
+[krea2_edit] run 2 seed=4202
+  wall=396.491s exec=395.775s peak_vram=14529MB status=success
+
+[krea2_edit] run 3 seed=4203
+  wall=396.485s exec=395.788s peak_vram=14529MB status=success
+
+[krea2_edit_q5km] warmup seed=4200
+  wall=400.766s exec=400.518s peak_vram=12993MB status=success
+
+[krea2_edit_q5km] run 1 seed=4201
+  wall=395.793s exec=395.546s peak_vram=12993MB status=success
+
+[krea2_edit_q5km] run 2 seed=4202

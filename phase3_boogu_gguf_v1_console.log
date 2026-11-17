@@ -1,0 +1,17 @@
+
+[boogu_gguf_v1] warmup seed=4200
+  wall=54.449s exec=54.14s peak_vram=11585MB status=success
+
+[boogu_gguf_v1] run 1 seed=4201
+  wall=41.097s exec=40.93s peak_vram=11585MB status=success
+
+[boogu_gguf_v1] run 2 seed=4202
+  wall=41.226s exec=40.928s peak_vram=11585MB status=success
+
+[boogu_gguf_v1] run 3 seed=4203
+  wall=41.23s exec=40.935s peak_vram=11585MB status=success
+
+Wrote phase3_boogu_gguf_v1_results.json
+
+Measured runs (mean):
+  boogu_gguf_v1: wall 41.18s, exec 40.93s, peak VRAM 11585 MB, n=3

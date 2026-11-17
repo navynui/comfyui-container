@@ -1,0 +1,206 @@
+{
+  "zimage": {
+    "prompt_id": "101afea1-50db-4531-854f-aef3e95104c8",
+    "peak_vram_mb": 14695,
+    "total_events_seconds": 170.736,
+    "cached_nodes": [],
+    "nodes": [
+      {
+        "node": "57:3",
+        "class": "KSampler",
+        "title": "KSampler",
+        "seconds": 148.551
+      },
+      {
+        "node": "57:28",
+        "class": "UNETLoader",
+        "title": "Load Diffusion Model",
+        "seconds": 10.604
+      },
+      {
+        "node": "57:8",
+        "class": "VAEDecode",
+        "title": "VAE Decode",
+        "seconds": 4.052
+      },
+      {
+        "node": "57:30",
+        "class": "CLIPLoader",
+        "title": "Load CLIP",
+        "seconds": 3.865
+      },
+      {
+        "node": "57:27",
+        "class": "CLIPTextEncode",
+        "title": "CLIP Text Encode (Prompt)",
+        "seconds": 2.338
+      },
+      {
+        "node": "9",
+        "class": "SaveImage",
+        "title": "Save Image",
+        "seconds": 1.04
+      },
+      {
+        "node": "57:29",
+        "class": "VAELoader",
+        "title": "Load VAE",
+        "seconds": 0.262
+      },
+      {
+        "node": "57:13",
+        "class": "EmptySD3LatentImage",
+        "title": "EmptySD3LatentImage",
+        "seconds": 0.011
+      },
+      {
+        "node": "57:11",
+        "class": "ModelSamplingAuraFlow",
+        "title": "ModelSamplingAuraFlow",
+        "seconds": 0.011
+      },
+      {
+        "node": "57:33",
+        "class": "ConditioningZeroOut",
+        "title": "ConditioningZeroOut",
+        "seconds": 0.001
+      }
+    ]
+  },
+  "krea2": {
+    "prompt_id": "cb200c03-b3e6-4eeb-830f-dee287ca9cc4",
+    "peak_vram_mb": 12609,
+    "total_events_seconds": 138.204,
+    "cached_nodes": [],
+    "nodes": [
+      {
+        "node": "3",
+        "class": "KSampler",
+        "title": "KSampler",
+        "seconds": 126.572
+      },
+      {
+        "node": "4",
+        "class": "CLIPTextEncode",
+        "title": "CLIP Text Encode (Prompt)",
+        "seconds": 6.147
+      },
+      {
+        "node": "2",
+        "class": "CLIPLoader",
+        "title": "Load CLIP",
+        "seconds": 3.821
+      },
+      {
+        "node": "7",
+        "class": "VAEDecode",
+        "title": "VAE Decode",
+        "seconds": 0.978
+      },
+      {
+        "node": "8",
+        "class": "VAELoader",
+        "title": "Load VAE",
+        "seconds": 0.452
+      },
+      {
+        "node": "9",
+        "class": "SaveImage",
+        "title": "Save Image",
+        "seconds": 0.139
+      },
+      {
+        "node": "1",
+        "class": "UnetLoaderGGUF",
+        "title": "Unet Loader (GGUF)",
+        "seconds": 0.084
+      },
+      {
+        "node": "11",
+        "class": "ComfyUI-Krea2T-Enhancer",
+        "title": "ComfyUI-Krea2T-Enhancer",
+        "seconds": 0.009
+      },
+      {
+        "node": "10",
+        "class": "ConditioningKrea2Rebalance",
+        "title": "Conditioning Krea2 Rebalance",
+        "seconds": 0.003
+      },
+      {
+        "node": "6",
+        "class": "EmptyLatentImage",
+        "title": "Empty Latent Image",
+        "seconds": 0.0
+      },
+      {
+        "node": "5",
+        "class": "ConditioningZeroOut",
+        "title": "ConditioningZeroOut",
+        "seconds": 0.0
+      }
+    ]
+  },
+  "boogu": {
+    "prompt_id": "1908c9dc-3605-4203-bbd8-bdc58ba65728",
+    "peak_vram_mb": 14113,
+    "total_events_seconds": 161.425,
+    "cached_nodes": [],
+    "nodes": [
+      {
+        "node": "34:32",
+        "class": "KSampler",
+        "title": "KSampler",
+        "seconds": 126.51
+      },
+      {
+        "node": "34:11",
+        "class": "CLIPTextEncode",
+        "title": "CLIP Text Encode (Prompt)",
+        "seconds": 26.492
+      },
+      {
+        "node": "34:7",
+        "class": "CLIPLoader",
+        "title": "Load CLIP",
+        "seconds": 5.475
+      },
+      {
+        "node": "34:2",
+        "class": "UNETLoader",
+        "title": "Load Diffusion Model",
+        "seconds": 1.156
+      },
+      {
+        "node": "34:3",
+        "class": "VAEDecode",
+        "title": "VAE Decode",
+        "seconds": 0.983
+      },
+      {
+        "node": "33",
+        "class": "SaveImage",
+        "title": "Save Image",
+        "seconds": 0.4
+      },
+      {
+        "node": "34:5",
+        "class": "VAELoader",
+        "title": "Load VAE",
+        "seconds": 0.391
+      },
+      {
+        "node": "34:8",
+        "class": "EmptyLatentImage",
+        "title": "Empty Latent Image",
+        "seconds": 0.01
+      },
+      {
+        "node": "34:9",
+        "class": "ConditioningZeroOut",
+        "title": "Conditioning Zero Out",
+        "seconds": 0.008
+      }
+    ]
+  }
+}

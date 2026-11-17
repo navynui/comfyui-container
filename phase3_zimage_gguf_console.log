@@ -1,0 +1,43 @@
+
+[zimage] warmup seed=4200
+  wall=170.361s exec=169.629s peak_vram=14691MB status=success
+
+[zimage] run 1 seed=4201
+  wall=151.231s exec=150.609s peak_vram=14505MB status=success
+
+[zimage] run 2 seed=4202
+  wall=151.201s exec=150.553s peak_vram=14505MB status=success
+
+[zimage] run 3 seed=4203
+  wall=151.201s exec=150.647s peak_vram=14505MB status=success
+
+[zimage_q8] warmup seed=4200
+  wall=155.203s exec=154.396s peak_vram=14751MB status=success
+
+[zimage_q8] run 1 seed=4201
+  wall=150.596s exec=150.146s peak_vram=14751MB status=success
+
+[zimage_q8] run 2 seed=4202
+  wall=150.627s exec=150.178s peak_vram=14751MB status=success
+
+[zimage_q8] run 3 seed=4203
+  wall=151.186s exec=150.227s peak_vram=14751MB status=success
+
+[zimage_q6k] warmup seed=4200
+  wall=158.207s exec=157.547s peak_vram=13825MB status=success
+
+[zimage_q6k] run 1 seed=4201
+  wall=154.197s exec=153.336s peak_vram=13825MB status=success
+
+[zimage_q6k] run 2 seed=4202
+  wall=154.201s exec=153.403s peak_vram=13825MB status=success
+
+[zimage_q6k] run 3 seed=4203
+  wall=154.204s exec=153.561s peak_vram=13825MB status=success
+
+Wrote phase3_zimage_gguf_results.json
+
+Measured runs (mean):
+  zimage: wall 151.21s, exec 150.60s, peak VRAM 14505 MB, n=3
+  zimage_q8: wall 150.80s, exec 150.18s, peak VRAM 14751 MB, n=3
+  zimage_q6k: wall 154.20s, exec 153.43s, peak VRAM 13825 MB, n=3

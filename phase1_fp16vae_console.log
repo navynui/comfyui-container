@@ -1,0 +1,43 @@
+
+[zimage] warmup seed=4200
+  wall=175.715s exec=174.993s peak_vram=14695MB status=success
+
+[zimage] run 1 seed=4201
+  wall=151.2s exec=150.436s peak_vram=14501MB status=success
+
+[zimage] run 2 seed=4202
+  wall=151.202s exec=150.566s peak_vram=14505MB status=success
+
+[zimage] run 3 seed=4203
+  wall=151.198s exec=150.533s peak_vram=14505MB status=success
+
+[krea2] warmup seed=4200
+  wall=136.213s exec=135.244s peak_vram=12609MB status=success
+
+[krea2] run 1 seed=4201
+  wall=118.366s exec=118.115s peak_vram=12705MB status=success
+
+[krea2] run 2 seed=4202
+  wall=118.363s exec=118.114s peak_vram=12705MB status=success
+
+[krea2] run 3 seed=4203
+  wall=118.347s exec=118.1s peak_vram=12577MB status=success
+
+[boogu] warmup seed=4200
+  wall=217.48s exec=217.281s peak_vram=14113MB status=success
+
+[boogu] run 1 seed=4201
+  wall=37.058s exec=36.597s peak_vram=13921MB status=success
+
+[boogu] run 2 seed=4202
+  wall=37.056s exec=36.658s peak_vram=13921MB status=success
+
+[boogu] run 3 seed=4203
+  wall=37.052s exec=36.605s peak_vram=13921MB status=success
+
+Wrote /home/nui/dev/comfyui-container/phase1_fp16vae_results.json
+
+Measured runs (mean):
+  zimage: wall 151.20s, exec 150.51s, peak VRAM 14505 MB, n=3
+  krea2: wall 118.36s, exec 118.11s, peak VRAM 12705 MB, n=3
+  boogu: wall 37.06s, exec 36.62s, peak VRAM 13921 MB, n=3

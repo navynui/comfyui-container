@@ -1,0 +1,40 @@
+
+[zimage] profiled run ...
+  peak VRAM 14695 MB
+   148.55s  57:3    KSampler
+    10.60s  57:28   UNETLoader
+     4.05s  57:8    VAEDecode
+     3.87s  57:30   CLIPLoader
+     2.34s  57:27   CLIPTextEncode
+     1.04s  9       SaveImage
+     0.26s  57:29   VAELoader
+     0.01s  57:13   EmptySD3LatentImage
+     0.01s  57:11   ModelSamplingAuraFlow
+     0.00s  57:33   ConditioningZeroOut
+
+[krea2] profiled run ...
+  peak VRAM 12609 MB
+   126.57s  3       KSampler
+     6.15s  4       CLIPTextEncode
+     3.82s  2       CLIPLoader
+     0.98s  7       VAEDecode
+     0.45s  8       VAELoader
+     0.14s  9       SaveImage
+     0.08s  1       UnetLoaderGGUF
+     0.01s  11      ComfyUI-Krea2T-Enhancer
+     0.00s  10      ConditioningKrea2Rebalance
+     0.00s  6       EmptyLatentImage
+
+[boogu] profiled run ...
+  peak VRAM 14113 MB
+   126.51s  34:32   KSampler
+    26.49s  34:11   CLIPTextEncode
+     5.47s  34:7    CLIPLoader
+     1.16s  34:2    UNETLoader
+     0.98s  34:3    VAEDecode
+     0.40s  33      SaveImage
+     0.39s  34:5    VAELoader
+     0.01s  34:8    EmptyLatentImage
+     0.01s  34:9    ConditioningZeroOut
+
+Wrote phase3_node_profiles.json

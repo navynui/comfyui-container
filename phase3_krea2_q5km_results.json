@@ -1,0 +1,447 @@
+[
+  {
+    "workflow": "krea2",
+    "run": 0,
+    "seed": 4200,
+    "prompt_id": "da513839-48d5-4e35-8954-3cf8cfbb2f55",
+    "wall_seconds": 131.241,
+    "execution_seconds": 130.612,
+    "peak_vram_mb": 12545,
+    "status": "success",
+    "meta": {
+      "prompt_node": "4",
+      "latent_node": "6",
+      "sampler_node": "3",
+      "save_node": "9",
+      "width": 1280,
+      "height": 720,
+      "steps": 8,
+      "sampler": "er_sde",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4200
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "da513839-48d5-4e35-8954-3cf8cfbb2f55",
+          "timestamp": 1793713347401
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "da513839-48d5-4e35-8954-3cf8cfbb2f55",
+          "timestamp": 1793713347403
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "da513839-48d5-4e35-8954-3cf8cfbb2f55",
+          "timestamp": 1793713478013
+        }
+      ]
+    ],
+    "warmup": true
+  },
+  {
+    "workflow": "krea2",
+    "run": 1,
+    "seed": 4201,
+    "prompt_id": "bd09dcc1-182c-4d9f-a074-4bd130904b50",
+    "wall_seconds": 119.155,
+    "execution_seconds": 118.182,
+    "peak_vram_mb": 12641,
+    "status": "success",
+    "meta": {
+      "prompt_node": "4",
+      "latent_node": "6",
+      "sampler_node": "3",
+      "save_node": "9",
+      "width": 1280,
+      "height": 720,
+      "steps": 8,
+      "sampler": "er_sde",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4201
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "bd09dcc1-182c-4d9f-a074-4bd130904b50",
+          "timestamp": 1793713478716
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "4",
+            "5",
+            "6",
+            "8",
+            "10",
+            "11"
+          ],
+          "prompt_id": "bd09dcc1-182c-4d9f-a074-4bd130904b50",
+          "timestamp": 1793713478718
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "bd09dcc1-182c-4d9f-a074-4bd130904b50",
+          "timestamp": 1793713596898
+        }
+      ]
+    ],
+    "warmup": false
+  },
+  {
+    "workflow": "krea2",
+    "run": 2,
+    "seed": 4202,
+    "prompt_id": "326cd56b-0627-4dc1-90b5-4fe34f32acd8",
+    "wall_seconds": 118.348,
+    "execution_seconds": 118.103,
+    "peak_vram_mb": 12641,
+    "status": "success",
+    "meta": {
+      "prompt_node": "4",
+      "latent_node": "6",
+      "sampler_node": "3",
+      "save_node": "9",
+      "width": 1280,
+      "height": 720,
+      "steps": 8,
+      "sampler": "er_sde",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4202
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "326cd56b-0627-4dc1-90b5-4fe34f32acd8",
+          "timestamp": 1793713597990
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "4",
+            "5",
+            "6",
+            "8",
+            "10",
+            "11"
+          ],
+          "prompt_id": "326cd56b-0627-4dc1-90b5-4fe34f32acd8",
+          "timestamp": 1793713597991
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "326cd56b-0627-4dc1-90b5-4fe34f32acd8",
+          "timestamp": 1793713716093
+        }
+      ]
+    ],
+    "warmup": false
+  },
+  {
+    "workflow": "krea2",
+    "run": 3,
+    "seed": 4203,
+    "prompt_id": "3da63bd3-a7bf-4fe9-af57-6416f6877ffc",
+    "wall_seconds": 118.356,
+    "execution_seconds": 118.12,
+    "peak_vram_mb": 12609,
+    "status": "success",
+    "meta": {
+      "prompt_node": "4",
+      "latent_node": "6",
+      "sampler_node": "3",
+      "save_node": "9",
+      "width": 1280,
+      "height": 720,
+      "steps": 8,
+      "sampler": "er_sde",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4203
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "3da63bd3-a7bf-4fe9-af57-6416f6877ffc",
+          "timestamp": 1793713716388
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "4",
+            "5",
+            "6",
+            "8",
+            "10",
+            "11"
+          ],
+          "prompt_id": "3da63bd3-a7bf-4fe9-af57-6416f6877ffc",
+          "timestamp": 1793713716389
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "3da63bd3-a7bf-4fe9-af57-6416f6877ffc",
+          "timestamp": 1793713834508
+        }
+      ]
+    ],
+    "warmup": false
+  },
+  {
+    "workflow": "krea2_q5km",
+    "run": 0,
+    "seed": 4200,
+    "prompt_id": "b97c099a-9439-418d-946d-73dfa52a79d2",
+    "wall_seconds": 123.158,
+    "execution_seconds": 122.166,
+    "peak_vram_mb": 11521,
+    "status": "success",
+    "meta": {
+      "prompt_node": "4",
+      "latent_node": "6",
+      "sampler_node": "3",
+      "save_node": "9",
+      "width": 1280,
+      "height": 720,
+      "steps": 8,
+      "sampler": "er_sde",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4200
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "b97c099a-9439-418d-946d-73dfa52a79d2",
+          "timestamp": 1793713834789
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "2",
+            "4",
+            "5",
+            "6",
+            "8",
+            "10"
+          ],
+          "prompt_id": "b97c099a-9439-418d-946d-73dfa52a79d2",
+          "timestamp": 1793713834790
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "b97c099a-9439-418d-946d-73dfa52a79d2",
+          "timestamp": 1793713956955
+        }
+      ]
+    ],
+    "warmup": true
+  },
+  {
+    "workflow": "krea2_q5km",
+    "run": 1,
+    "seed": 4201,
+    "prompt_id": "2531630d-3887-4a17-ba5d-982ca0ab2300",
+    "wall_seconds": 118.148,
+    "execution_seconds": 117.832,
+    "peak_vram_mb": 11233,
+    "status": "success",
+    "meta": {
+      "prompt_node": "4",
+      "latent_node": "6",
+      "sampler_node": "3",
+      "save_node": "9",
+      "width": 1280,
+      "height": 720,
+      "steps": 8,
+      "sampler": "er_sde",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4201
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "2531630d-3887-4a17-ba5d-982ca0ab2300",
+          "timestamp": 1793713958061
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "4",
+            "5",
+            "6",
+            "8",
+            "10",
+            "11"
+          ],
+          "prompt_id": "2531630d-3887-4a17-ba5d-982ca0ab2300",
+          "timestamp": 1793713958063
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "2531630d-3887-4a17-ba5d-982ca0ab2300",
+          "timestamp": 1793714075893
+        }
+      ]
+    ],
+    "warmup": false
+  },
+  {
+    "workflow": "krea2_q5km",
+    "run": 2,
+    "seed": 4202,
+    "prompt_id": "d61951be-d2e1-4c68-97f7-0563aa09963f",
+    "wall_seconds": 118.154,
+    "execution_seconds": 117.839,
+    "peak_vram_mb": 11233,
+    "status": "success",
+    "meta": {
+      "prompt_node": "4",
+      "latent_node": "6",
+      "sampler_node": "3",
+      "save_node": "9",
+      "width": 1280,
+      "height": 720,
+      "steps": 8,
+      "sampler": "er_sde",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4202
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "d61951be-d2e1-4c68-97f7-0563aa09963f",
+          "timestamp": 1793714076287
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "4",
+            "5",
+            "6",
+            "8",
+            "10",
+            "11"
+          ],
+          "prompt_id": "d61951be-d2e1-4c68-97f7-0563aa09963f",
+          "timestamp": 1793714076289
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "d61951be-d2e1-4c68-97f7-0563aa09963f",
+          "timestamp": 1793714194126
+        }
+      ]
+    ],
+    "warmup": false
+  },
+  {
+    "workflow": "krea2_q5km",
+    "run": 3,
+    "seed": 4203,
+    "prompt_id": "8f349b83-c410-4887-b444-ce86d474f7cc",
+    "wall_seconds": 118.154,
+    "execution_seconds": 117.839,
+    "peak_vram_mb": 11265,
+    "status": "success",
+    "meta": {
+      "prompt_node": "4",
+      "latent_node": "6",
+      "sampler_node": "3",
+      "save_node": "9",
+      "width": 1280,
+      "height": 720,
+      "steps": 8,
+      "sampler": "er_sde",
+      "scheduler": "simple",
+      "cfg": 1,
+      "seed": 4203
+    },
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "8f349b83-c410-4887-b444-ce86d474f7cc",
+          "timestamp": 1793714194550
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "4",
+            "5",
+            "6",
+            "8",
+            "10",
+            "11"
+          ],
+          "prompt_id": "8f349b83-c410-4887-b444-ce86d474f7cc",
+          "timestamp": 1793714194553
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "8f349b83-c410-4887-b444-ce86d474f7cc",
+          "timestamp": 1793714312389
+        }
+      ]
+    ],
+    "warmup": false
+  }
+]
